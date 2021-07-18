@@ -1,0 +1,93 @@
+  using System;
+
+namespace LibTestConcepts
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {         
+           Console.WriteLine("Hello here are my favorite books!");
+
+            //create array 
+
+            string[] FavoriteBooks = { "The Perks of being a Wallflower", "The Phantom Tollbooth", "A Prayer for Owen Meany", "Harry Potter and the Deathly Hallows" };
+
+            //Loops Practice  
+
+        foreach (string Book in FavoriteBooks)
+            {
+            Console.WriteLine(Book);
+               /* Console.WriteLine("This is a foreach loop");
+                this loops in each so put this statement after*/
+            }
+            Console.WriteLine("This is a foreach loop");
+
+        //need to write in array in console part not given like foreach loop
+            for (int b = 0; b < FavoriteBooks.Length; b++)
+            {
+                //Console.WriteLine(book); WRONG didn't include array name 
+                Console.WriteLine(FavoriteBooks[b]);
+               
+            }
+            Console.WriteLine("This is a for loop");
+
+            int book = 0;
+            while (book < FavoriteBooks.Length)
+            {
+                Console.WriteLine(FavoriteBooks[book]);
+                book++;
+            }
+            Console.WriteLine("This is a while loop");
+
+            int i = 0;
+            do
+            {
+                Console.WriteLine(FavoriteBooks[i]);
+                i++;
+            }
+            while (i < FavoriteBooks.Length);
+            
+            Console.WriteLine("This is a do/while loop");
+
+            //reassign an array 
+
+            FavoriteBooks[3] = "The Elegance of a Hedgehog";
+
+            Console.WriteLine("This was changed in the array:" + FavoriteBooks[3]);
+
+            Console.WriteLine("How many of my favorite books do you own? Remmeber I changed the Harry Potter to ELegance of a Hedgehog since I have not read it.");
+
+            int NumOwned = Convert.ToInt32(Console.ReadLine());
+
+            //if they own all 4 then 
+
+            if (NumOwned == 4)
+            {
+                Console.WriteLine("you own all 4 of the books from the list.");
+            }
+            else if (NumOwned == 0)
+            {
+                Console.WriteLine("definetly check out the books on my list");
+            }
+            else
+            {
+                Console.WriteLine("Yay, you read one or more from my list!");
+            }
+
+            Console.WriteLine("Is there any book on the revised list you would like to find more about? Aswer as True or False.");
+            bool ansinfo = Convert.ToBoolean(Console.ReadLine());
+            //brainstrom more into this
+            if (ansinfo == true)
+                Console.WriteLine("Yay! Which book?");
+
+            string bkinfo = Console.ReadLine();
+
+            /*switch
+                case FavoriteBooks[0]*/
+
+
+
+                Console.Read();
+        }
+     }
+}
